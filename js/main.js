@@ -6,50 +6,70 @@ $(document).ready(function(){
 
 // !!!!!!!!!!!!!!!! Lightbox !!!!!!!!!!!!!!!!
 
-var $overlay = $("<div id='overlay'></div>");
+
+var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
 var $btnPrev = $('<button id="btnPrev" type="button"> < </button>');
 var $btnNext = $('<button id="btnNext" type="button"> > </button>')
-
-// Add image to overlay
+var $btnExit = $('<button id="btnExit" type="button"> x </button>')
+//Add image to overlay
 $overlay.append($image);
-
-//A caption to the overlay
+//Add caption to overlay
 $overlay.append($caption);
-
-//A arrows to the overlay
+//Add left button to overlay
 $overlay.append($btnPrev);
+//Add right button to overlay
 $overlay.append($btnNext);
-
-//Add overlay
+//Add exit button to overlay
+$overlay.append($btnExit);
+//Add overlay to body
 $("body").append($overlay);
 
-
-//Capture the click event on a link to an image
-$(".container a").click(function(event){
+//Prevent Default and capture image to show
+$("div.gallery").on("click", function(event){
   event.preventDefault();
-  var imageLocation = $(this).attr("href");
-  //Update overlay with the image linked in the link
+  var imageLocation = $(this).find("a").attr("href");
+  //Show image on overlay
   $image.attr("src", imageLocation);
   //Remove class active from previous active item
-  $("#overlay").removeClass("active");
+  $("div.active").removeClass("active");
   //Adds active class to active image
-  $("#overlay").addClass("active");
-
+  $(this).addClass("active");
+  //Finding caption for clicked image
+  var $captionLocation = $(this).find(".title").text();
+  //Dispalays caption under image
+  $caption.text($captionLocation);
   //Show the overlay
   $overlay.show();
-  //Get child's alt attribute and set caption
-  var titleText = $(this).children("img").attr("alt");
-  $caption.text(titleText);
+
+
+
 });
 
-//When overlay is clicked
-$overlay.click(function (){
+//When x is clicked
+$btnExit.on("click", function(){
   //Hide the overlay
   $overlay.hide();
-  //Remove class active from previous active item
-  $("#overlay").removeClass("active");
+  //Remove class "active"
+  $("div.active").removeClass("active");
+
+});
+
+
+
+$(document).on("keydown", function(event) {
+
+  if($("#overlay").css("display") !== 'none') {
+    //Left
+    if(event.which == "37") {
+        navigate(-1);
+      //Right
+    } else if(event.which == "39") {
+        navigate(1);
+    }
+  }
+
 });
 
 
@@ -65,8 +85,8 @@ $btnNext.on("click", function(){
 
 function navigate(direction){
   if(direction == -1) {  // left
-    $("div.active").prev().find("div.gallery a").trigger("click");
+    $("div.active").prev().find(".image").trigger("click");
   } else if (direction == 1) {  //right
-    $("div.active").next().find("div.gallery a").trigger("click");
+    $("div.active").next().find(".image").trigger("click");
   }
 }
