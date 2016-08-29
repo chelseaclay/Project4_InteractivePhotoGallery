@@ -6,46 +6,60 @@ $(document).ready(function(){
 
 // !!!!!!!!!!!!!!!! Lightbox !!!!!!!!!!!!!!!!
 
-var $overlay = $("<div id='overlay'></div>");
+
+var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
 var $btnPrev = $('<button id="btnPrev" type="button"> < </button>');
+<<<<<<< HEAD
 var $btnNext = $('<button id="btnNext" type="button"> > </button>');
 var $btnExit = $('<button id="btnExit" type="button"> x </button>');
 
 // Add image to overlay
+=======
+var $btnNext = $('<button id="btnNext" type="button"> > </button>')
+var $btnExit = $('<button id="btnExit" type="button"> x </button>')
+//Add image to overlay
+>>>>>>> master
 $overlay.append($image);
-
-//A caption to the overlay
+//Add caption to overlay
 $overlay.append($caption);
-
-//A arrows to the overlay
+//Add left button to overlay
 $overlay.append($btnPrev);
+//Add right button to overlay
 $overlay.append($btnNext);
+<<<<<<< HEAD
 
 $overlay.append($btnExit);
 //Add overlay to body
 
 //Add overlay
+=======
+//Add exit button to overlay
+$overlay.append($btnExit);
+//Add overlay to body
+>>>>>>> master
 $("body").append($overlay);
 
-
-//Capture the click event on a link to an image
-$(".container a").click(function(event){
+//Prevent Default and capture image to show
+$("div.gallery").on("click", function(event){
   event.preventDefault();
-  var imageLocation = $(this).attr("href");
-  //Update overlay with the image linked in the link
+  var imageLocation = $(this).find("a").attr("href");
+  //Show image on overlay
   $image.attr("src", imageLocation);
   //Remove class active from previous active item
-  $("#overlay").removeClass("active");
+  $("div.active").removeClass("active");
   //Adds active class to active image
-  $("#overlay").addClass("active");
-
+  $(this).addClass("active");
+  //Finding caption for clicked image
+  var $captionLocation = $(this).find(".title").text();
+  //Dispalays caption under image
+  $caption.text($captionLocation);
   //Show the overlay
   $overlay.show();
-  //Get child's alt attribute and set caption
-  var titleText = $(this).children("img").attr("alt");
-  $caption.text(titleText);
+
+
+
 });
 
 //When x is clicked
@@ -55,6 +69,25 @@ $btnExit.on("click", function(){
   //Remove class "active"
   $("div.active").removeClass("active");
 
+<<<<<<< HEAD
+=======
+});
+
+
+
+$(document).on("keydown", function(event) {
+
+  if($("#overlay").css("display") !== 'none') {
+    //Left
+    if(event.which == "37") {
+        navigate(-1);
+      //Right
+    } else if(event.which == "39") {
+        navigate(1);
+    }
+  }
+
+>>>>>>> master
 });
 
 
@@ -70,9 +103,15 @@ $btnNext.on("click", function(){
 
 function navigate(direction){
   if(direction == -1) {  // left
+<<<<<<< HEAD
     $("div.active").parent(".gallery").siblings().prev(".link").attr("href").trigger("click");
   } else if (direction == 1) {  //right
     $("div.active").parent(".gallery").siblings().next(".link").attr("href").trigger("click");
+=======
+    $("div.active").prev().find(".image").trigger("click");
+  } else if (direction == 1) {  //right
+    $("div.active").next().find(".image").trigger("click");
+>>>>>>> master
   }
 }
 
