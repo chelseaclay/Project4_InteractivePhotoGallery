@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chelsea Clay | Interactive Photo Gallery</title>
+  <caption>Chelsea Clay | Interactive Photo Gallery</caption>
    <link href="https://fonts.googleapis.com/css?family=Megrim|Scope+One" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="preload">
-  <header id="top" class="fixed_bar clearfix">
+<body class="preload" id="top">
+  <header class="fixed_bar clearfix">
     <div class="wrapper">
       <h1>Photo Gallery</h1>
       <input type="text" id="searchBox" name="search" placeholder="Search">
@@ -19,86 +19,133 @@
 
   <div class="container clearfix">
       <div class="gallery">
-          <a href="img/01.jpg" class="image">
+          <a href="img/01.jpg" class="image first">
             <img src="img/Thumbnails/01.jpg" alt="Hay Bales">
-            <span class="title"><span>Hay Bales</span></span>
+            <span class="overlayCaption">
+              <span class="title">Hay Bales</span>
+            </span>
+                <span class="caption">I love hay bales. Took this snap on a drive through the countryside past some straw fields.
+            </span>
           </a>
         </div>
 
         <div class="gallery">
             <a href="img/02.jpg" class="image">
               <img src="img/Thumbnails/02.jpg" alt="Lake">
-              <span class="title"><span>Lake</span></span>
+              <span class="overlayCaption">
+                <span class="title">Lake</span>
+              </span>
+                  <span class="caption">The lake was so calm today. We had a great view of the snow on the mountains from here.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/03.jpg" class="image">
               <img src="img/Thumbnails/03.jpg" alt="Canyon">
-              <span class="title"><span>Canyon</span></span>
+              <span class="overlayCaption">
+                <span class="title">Canyon</span>
+              </span>
+                  <span class="caption">I hiked to the top of the mountain and got this picture of the canyon and trees below.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/04.jpg" class="image">
               <img src="img/Thumbnails/04.jpg" alt="Iceberg">
-              <span class="title"><span>Iceberg</span></span>
+              <span class="overlayCaption">
+                <span class="title">Iceberg</span>
+              </span>
+                  <span class="caption">It was amazing to see an iceberg up close, it was so cold but didn’t snow today.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/05.jpg" class="image">
               <img src="img/Thumbnails/05.jpg" alt="Desert">
-              <span class="title"><span>Desert</span></span>
+              <span class="overlayCaption">
+                <span class="title">Desert</span>
+              </span>
+                  <span class="caption">The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/06.jpg" class="image">
               <img src="img/Thumbnails/06.jpg" alt="Fall">
-              <span class="title"><span>Fall</span></span>
+              <span class="overlayCaption">
+                <span class="title">Fall</span>
+              </span>
+                  <span class="caption">Fall is coming, I love when the leaves on the trees start to change color.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/07.jpg" class="image">
               <img src="img/Thumbnails/07.jpg" alt="Plantation">
-              <span class="title"><span>Plantation</span></span>
+              <span class="overlayCaption">
+                <span class="title">Plantation</span>
+              </span>
+                  <span class="caption">I drove past this plantation yesterday, everything is so green!
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/08.jpg" class="image">
               <img src="img/Thumbnails/08.jpg" alt="Dunes">
-              <span class="title"><span>Dunes</span></span>
+              <span class="overlayCaption">
+                <span class="title">Dunes</span>
+              </span>
+                  <span class="caption">My summer vacation to the Oregon Coast. I love the sandy dunes!
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/09.jpg" class="image">
               <img src="img/Thumbnails/09.jpg" alt="Countryside Lane">
-              <span class="title"><span>Countryside Lane</span></span>
+              <span class="overlayCaption">
+                <span class="title">Countryside Lane</span>
+              </span>
+                  <span class="caption">We enjoyed a quiet stroll down this countryside lane.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/10.jpg" class="image">
               <img src="img/Thumbnails/10.jpg" alt="Sunset">
-              <span class="title"><span>Sunset</span></span>
+              <span class="overlayCaption">
+                <span class="title">Sunset</span>
+              </span>
+                  <span class="caption">Sunset at the coast! The sky turned a lovely shade of orange.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
             <a href="img/11.jpg" class="image">
               <img src="img/Thumbnails/11.jpg" alt="Cave">
-              <span class="title"><span>Cave</span></span>
+              <span class="overlayCaption">
+                <span class="title">Cave</span>
+              </span>
+                  <span class="caption">I did a tour of a cave today and the view of the landscape below was breathtaking.
+              </span>
             </a>
         </div>
 
         <div class="gallery">
-            <a href="img/12.jpg" class="image">
+            <a href="img/12.jpg" class="image last">
               <img src="img/Thumbnails/12.jpg" alt="Bluebells">
-              <span class="title"><span>Bluebells</span></span>
+              <span class="overlayCaption">
+                <span class="title">Bluebells</span>
+              </span>
+                  <span class="caption">I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.            </span>
             </a>
         </div>
 
@@ -107,7 +154,7 @@
 
 
   <footer>
-    <div>
+    <div class="wrapper">
       <p class="footLogo">Photo Gallery</p>
       <p><a href="#top">Back to Top</a></p>
     </div>

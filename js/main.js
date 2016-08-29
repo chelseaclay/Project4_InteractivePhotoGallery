@@ -9,20 +9,24 @@ $(document).ready(function(){
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
+var $title = $("<p class='overlayTitle'></p>");
 var $caption = $("<p></p>");
 var $btnPrev = $('<button id="btnPrev" type="button"> < </button>');
 var $btnNext = $('<button id="btnNext" type="button"> > </button>')
-var $btnExit = $('<button id="btnExit" type="button"> x </button>')
+var $btnExit = $('<button id="btnExit" type="button"> EXIT </button>')
+
+//Add exit button to overlay
+$overlay.append($btnExit);
 //Add image to overlay
 $overlay.append($image);
+//Add title to overlay
+$overlay.append($title);
 //Add caption to overlay
 $overlay.append($caption);
 //Add left button to overlay
 $overlay.append($btnPrev);
 //Add right button to overlay
 $overlay.append($btnNext);
-//Add exit button to overlay
-$overlay.append($btnExit);
 //Add overlay to body
 $("body").append($overlay);
 
@@ -36,9 +40,13 @@ $("div.gallery").on("click", function(event){
   $("div.active").removeClass("active");
   //Adds active class to active image
   $(this).addClass("active");
+  //Finding title for clicked image
+  var $titleLocation = $(this).find(".title").text();
   //Finding caption for clicked image
-  var $captionLocation = $(this).find(".title").text();
-  //Dispalays caption under image
+  var $captionLocation = $(this).find(".caption").text();
+  //Displays title under image
+  $title.text($titleLocation);
+  //Displays caption under title
   $caption.text($captionLocation);
   //Show the overlay
   $overlay.show();
@@ -53,13 +61,11 @@ $btnExit.on("click", function(){
   $overlay.hide();
   //Remove class "active"
   $("div.active").removeClass("active");
-
 });
 
 
-
+//Keyboard navigation
 $(document).on("keydown", function(event) {
-
   if($("#overlay").css("display") !== 'none') {
     //Left
     if(event.which == "37") {
@@ -67,9 +73,14 @@ $(document).on("keydown", function(event) {
       //Right
     } else if(event.which == "39") {
         navigate(1);
+      //Esc
+    } else if(event.which == "27"){
+      //Hide the overlay
+      $overlay.hide();
+      //Remove class "active"
+      $("div.active").removeClass("active");
     }
   }
-
 });
 
 
