@@ -65,8 +65,8 @@ $btnNext.on("click", function(){
 
 function navigate(direction){
   if(direction == -1) {  // left
-    $("div.active").prev().find(".gallery a").trigger("click");
+    $("div.active").prev().find("div.gallery a").trigger("click");
   } else if (direction == 1) {  //right
-    $("div.active").next().find(".gallery a").trigger("click");
+    $("div.active").next().find("div.gallery a").trigger("click");
   }
 }
