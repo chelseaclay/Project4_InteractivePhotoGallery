@@ -38,13 +38,14 @@ $("div.gallery").on("click", function(event){
   event.preventDefault();
   var imageLocation = $(this).find("a").attr("href");
   var $video = $(this).find("a").hasClass("video");
+  var $photo = $(this).find("a").hasClass("image");
 
   if ($video === true){
     //Show video on overlay
     $iframe.attr("src", imageLocation);
     //Hide the image
     $image.hide();
-  } else if ($video === false) {
+  } else if ($photo === true) {
   //Show image on overlay
   $image.attr("src", imageLocation);
   //Hide the video
@@ -110,9 +111,9 @@ $btnNext.on("click", function(){
 
 function navigate(direction){
   if(direction == -1) {  // left
-    $("div.active").prev().find(".image").trigger("click");
+    $("div.active").prev().find("a").trigger("click");
   } else if (direction == 1) {  //right
-    $("div.active").next().find(".image").trigger("click");
+    $("div.active").next().find("a").trigger("click");
   }
 }
 
