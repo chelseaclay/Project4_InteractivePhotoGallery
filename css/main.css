@@ -187,11 +187,6 @@ footer p {
     position: absolute;
 }
 
-<<<<<<< HEAD
-/*.arrows {
-  display: none;
-}*/
-=======
 #overlay button:active {
   color: rgb(119, 136, 153);
 }
@@ -199,7 +194,6 @@ footer p {
 #overlay button:focus {
   outline: none;
 }
->>>>>>> master
 
 #btnPrev {
   bottom: 2%;
@@ -219,7 +213,6 @@ footer p {
   bottom: 4.5%;
   left: 42.5%;
 }
-
 
 
 /* --------------------------------------------------------------------------
