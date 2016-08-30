@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
+var $iframe = $("<iframe></iframe>");
 var $title = $("<p class='overlayTitle'></p>");
 var $caption = $("<p></p>");
 var $btnPrev = $('<button id="btnPrev" type="button"> < </button>');
@@ -19,6 +20,8 @@ var $btnExit = $('<button id="btnExit" type="button"> EXIT </button>')
 $overlay.append($btnExit);
 //Add image to overlay
 $overlay.append($image);
+//Add iframe to overlay
+$overlay.append($iframe);
 //Add title to overlay
 $overlay.append($title);
 //Add caption to overlay
@@ -34,8 +37,19 @@ $("body").append($overlay);
 $("div.gallery").on("click", function(event){
   event.preventDefault();
   var imageLocation = $(this).find("a").attr("href");
+  var $video = $(this).find("a").hasClass("video");
+
+  if ($video === true){
+    //Show video on overlay
+    $iframe.attr("src", imageLocation);
+    //Hide the image
+    $image.hide();
+  } else if ($video === false) {
   //Show image on overlay
   $image.attr("src", imageLocation);
+  //Hide the video
+  $iframe.hide();
+}
   //Remove class active from previous active item
   $("div.active").removeClass("active");
   //Adds active class to active image
