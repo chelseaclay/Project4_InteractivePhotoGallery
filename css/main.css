@@ -5,8 +5,8 @@
 body{
   margin: 0;
   padding: 0;
-  position: relative;
-  min-height: 100%;
+  min-height:100%;
+  background-color: rgba(119, 136, 153, 0.02);
 }
 
 
@@ -26,6 +26,7 @@ header {
   position: fixed;
   z-index: 100;
   top: 0;
+  box-shadow: 0 4px 2px -2px rgba(119, 136, 153, 0.2);
 }
 
 .wrapper {
@@ -110,38 +111,7 @@ header h1 {
   display: none;
 }
 
-/* !!!!!!!!!!!!!!!! Footer !!!!!!!!!!!!!!!! */
 
-footer {
-  margin: 0 auto;
-  padding: 0 10px;
-  background-color: black;
-  color: white;
-  position: absolute;;
-  bottom: -70px;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-.footLogo {
-  display: inline-block;
-  width: 50%;
-  font-family: 'Megrim', sans-serif;;
-  text-align: left;
-  font-size: 1em;
-}
-
-footer a,
-footer p {
-  display: inline-block;
-  text-align: right;
-  width: 49%;
-  font-family: 'Scope One', serif;
-  font-size: 0.80em;
-  color: white;
-  text-decoration: none;
-}
 
 /* !!!!!!!!!!!!!!!! Lightbox !!!!!!!!!!!!!!!! */
 
@@ -293,8 +263,7 @@ MEDIA QUERIES 1000px
 
 @media (min-width: 1000px) {
 
-.nav,
-footer div {
+.nav {
   margin: 0 auto;
   max-width: 1100px;
 }
@@ -322,12 +291,14 @@ div.gallery:last-of-type {
 }
 
 #overlay img {
-  max-width: 85%;
-  margin-top: 8%;
+  width: 80%;
+  max-width: 1100px;
+  margin-top: 5%;
 }
 
 #overlay p {
-  max-width: 85%;
+  width: 80%;
+  max-width: 1100px;
 }
 
 #btnPrev {
@@ -345,13 +316,10 @@ div.gallery:last-of-type {
 #btnExit{
   text-align: right;
   font-size: 1em;
-  bottom: 92%;
+  bottom: 95%;
   left: 88.5%;
 }
 
-footer a {
-  display: none;
-}
 
 /* !!!!! END MEDIA QUERY !!!!! */
 }
