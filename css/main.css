@@ -197,6 +197,35 @@ iframe {
 MEDIA QUERIES 738px
 --------------------------------------------------------------------------*/
 
+@media (max-width: 738px) and (orientation : landscape) {
+
+#overlay img {
+  margin-top: 2%;
+  width: 250px;
+}
+
+#overlay p {
+  width: 250px;
+  font-size: 0.8em;
+}
+
+#btnPrev {
+  bottom: 40%;
+}
+
+#btnNext {
+  bottom: 40%;
+}
+
+#btnExit {
+  bottom: 85%;
+  left: 85%;
+}
+
+/* !!!!! END MEDIA QUERY !!!!! */
+}
+
+
 @media (min-width: 738px) {
 
 header {
