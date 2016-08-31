@@ -13,8 +13,8 @@ var $iframe = $("<iframe></iframe>");
 var $title = $("<p class='overlayTitle'></p>");
 var $caption = $("<p></p>");
 var $btnPrev = $('<button id="btnPrev" type="button"> < </button>');
-var $btnNext = $('<button id="btnNext" type="button"> > </button>')
-var $btnExit = $('<button id="btnExit" type="button"> EXIT </button>')
+var $btnNext = $('<button id="btnNext" type="button"> > </button>');
+var $btnExit = $('<button id="btnExit" type="button"> EXIT </button>');
 
 //Add exit button to overlay
 $overlay.append($btnExit);
