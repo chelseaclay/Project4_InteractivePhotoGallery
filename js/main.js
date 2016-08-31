@@ -41,13 +41,15 @@ $("div.gallery").on("click", function(event){
   var $photo = $(this).find("a").hasClass("image");
 
   if ($video === true){
-    //Show video on overlay
+    //Find the video and show it on overlay
     $iframe.attr("src", imageLocation);
+    $iframe.show();
     //Hide the image
     $image.hide();
   } else if ($photo === true) {
-    //Show image on overlay
+    //Find the image and show it on overlay
     $image.attr("src", imageLocation);
+    $image.show();
     //Hide the video
     $iframe.hide();
   }
