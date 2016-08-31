@@ -258,6 +258,11 @@ header h1 {
   bottom: 4%;
 }
 
+iframe {
+  width: 700px;
+  height: 400px;
+}
+
 
 /* !!!!! END MEDIA QUERY !!!!! */
 }
@@ -327,6 +332,11 @@ div.gallery:last-of-type {
   bottom: 95%;
   left: 88.5%;
 }
+
+iframe {
+  margin-top: 5%;
+  width: 850px;
+  height: 600px;
 
 
 /* !!!!! END MEDIA QUERY !!!!! */

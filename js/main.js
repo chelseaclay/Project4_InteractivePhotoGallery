@@ -46,11 +46,11 @@ $("div.gallery").on("click", function(event){
     //Hide the image
     $image.hide();
   } else if ($photo === true) {
-  //Show image on overlay
-  $image.attr("src", imageLocation);
-  //Hide the video
-  $iframe.hide();
-}
+    //Show image on overlay
+    $image.attr("src", imageLocation);
+    //Hide the video
+    $iframe.hide();
+  }
   //Remove class active from previous active item
   $("div.active").removeClass("active");
   //Adds active class to active image
@@ -65,9 +65,6 @@ $("div.gallery").on("click", function(event){
   $caption.text($captionLocation);
   //Show the overlay
   $overlay.show();
-
-
-
 });
 
 //When x is clicked
