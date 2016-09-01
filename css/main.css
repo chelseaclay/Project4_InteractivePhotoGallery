@@ -61,8 +61,8 @@ form {
   position: absolute;
   font-family: 'Megrim', sans-serif;
   font-size: 18px;
-  top: 39px;
-  right: 0.5em;
+  top: 8px;
+  right: 3%;
   border: none;
   outline: none;
   background-color: transparent;
@@ -231,6 +231,17 @@ MEDIA QUERIES 738px
 
 @media (max-width: 738px) and (orientation : landscape) {
 
+header h1 {
+  margin: 0.5em auto;
+  font-size: 2em;
+}
+
+#reset {
+  font-size: 18px;
+  top: 8px;
+  right: 30%;
+}
+
 #overlay img {
   margin-top: 2%;
   width: 250px;
@@ -335,7 +346,6 @@ iframe {
 
 /* !!!!! END MEDIA QUERY !!!!! */
 }
-
 
 
 
