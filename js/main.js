@@ -144,7 +144,15 @@ function navigate(direction){
       if (index === -1) {
         $(img.element).parent().parent().addClass("hide");
       } else {
+        var count = 0
         $(img.element).parent().parent().removeClass("hide fourth").addClass("show");
+        $(".show").each(function(i, e) {
+        count=count+1;
+        if (count==4) {
+            $(e).addClass('filterFourth');
+            count=0;
+          }
+        });
       }
 
 

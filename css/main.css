@@ -98,8 +98,8 @@ form {
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  width: 0;
+  height: 0;
   transform: size(0);
   display: none;
 }
@@ -373,6 +373,10 @@ MEDIA QUERIES 1000px
 .fourth {
 	margin-right: 0;
 	margin-left: 0;
+}
+
+.filterFourth {
+  margin-right: 0;
 }
 
 #overlay img {
