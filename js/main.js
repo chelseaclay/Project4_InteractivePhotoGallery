@@ -144,7 +144,7 @@ function navigate(direction){
       if (index === -1) {
         $(img.element).parent().parent().addClass("hide");
       } else {
-        $(img.element).parent().parent().removeClass("hide");
+        $(img.element).parent().parent().removeClass("hide fourth").addClass("show");
       }
 
 

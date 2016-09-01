@@ -370,14 +370,9 @@ MEDIA QUERIES 1000px
   clear: both;
 }
 
-div.gallery:nth-of-type(4n+0) {
+.fourth {
 	margin-right: 0;
 	margin-left: 0;
-}
-
-div.gallery:last-of-type {
-  margin-right: 0;
-	margin-left: 60px;
 }
 
 #overlay img {
