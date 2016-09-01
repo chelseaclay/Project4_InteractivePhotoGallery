@@ -40,6 +40,10 @@ header h1 {
   max-width: 100%;
 }
 
+form {
+  position: relative;
+}
+
 #searchBox {
   outline: none;
   display: block;
@@ -51,6 +55,18 @@ header h1 {
   padding: 0.25em 0.5em;
   border: 1px solid rgb(219, 213, 205);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+#reset {
+  position: absolute;
+  font-family: 'Scope One', serif;
+  font-size: 16px;
+  top: 40px;
+  right: 0.5em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(119, 136, 153);
 }
 
 #searchBox:focus {
@@ -70,6 +86,22 @@ header h1 {
   text-align: center;
   position: relative;
   width: 200px;
+  opacity: 1;
+  transition: opacity 0.75s ease-in-out;
+  -webkit-transition: opacity 0.75s ease-in-out;
+  -moz-transition: opacity 0.75s ease-in-out;
+  -ms-transition: opacity 0.75s ease-in-out;
+  -o-transition: opacity 0.75s ease-in-out;
+}
+
+.hide {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  transform: size(0);
+  display: none;
 }
 
 .gallery img {
@@ -193,6 +225,7 @@ iframe {
   allowfullscreen: true;
 }
 
+
 /* --------------------------------------------------------------------------
 MEDIA QUERIES 738px
 --------------------------------------------------------------------------*/
@@ -261,7 +294,11 @@ header h1 {
   display: inline-block;
   margin-right: 30px;
   margin-left: 30px;
+}
 
+.hide {
+  margin: 0;
+  padding: 0;
 }
 
 .clearfix {
@@ -297,7 +334,6 @@ iframe {
   height: 400px;
 }
 
-
 /* !!!!! END MEDIA QUERY !!!!! */
 }
 
@@ -321,6 +357,13 @@ MEDIA QUERIES 1000px
   float: left;
 }
 
+.hide {
+  float: none;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 60px;
+}
+
 .clearfix {
   content: "";
   display: table;
@@ -328,13 +371,13 @@ MEDIA QUERIES 1000px
 }
 
 div.gallery:nth-of-type(4n+0) {
-		margin-right: 0;
-		margin-left: 0;
-	}
-
-div.gallery:last-of-type {
 	margin-right: 0;
 	margin-left: 0;
+}
+
+div.gallery:last-of-type {
+  margin-right: 0;
+	margin-left: 60px;
 }
 
 #overlay img {
@@ -371,7 +414,7 @@ iframe {
   margin-top: 5%;
   width: 850px;
   height: 500px;
-
+}
 
 /* !!!!! END MEDIA QUERY !!!!! */
 }
