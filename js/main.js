@@ -145,10 +145,6 @@ function navigate(direction){
         $(img.element).parent().parent().addClass("hide");
       } else if (index > -1) {
         $(img.element).parent().parent().removeClass("hide fourth").addClass("show");
-<<<<<<< HEAD
-=======
-
->>>>>>> gh-pages
       }
 
 
