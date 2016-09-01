@@ -143,7 +143,7 @@ function navigate(direction){
       // $(img.element).parent().parent().toggle(index != -1); // Show / hide
       if (index === -1) {
         $(img.element).parent().parent().addClass("hide");
-      } else {
+      } else if (index > -1) {
         var count = 0
         $(img.element).parent().parent().removeClass("hide fourth").addClass("show");
         $(".show").each(function(i, e) {

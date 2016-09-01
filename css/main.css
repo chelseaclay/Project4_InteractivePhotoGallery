@@ -365,7 +365,8 @@ MEDIA QUERIES 1000px
 }
 
 .show {
-  float: left;
+  float: none;
+  display: inline-block;
   margin-left: 0;
   margin-right: 60px;
 }
