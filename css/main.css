@@ -364,6 +364,12 @@ MEDIA QUERIES 1000px
   margin-right: 60px;
 }
 
+.show {
+  float: left;
+  margin-left: 0;
+  margin-right: 60px;
+}
+
 .clearfix {
   content: "";
   display: table;
