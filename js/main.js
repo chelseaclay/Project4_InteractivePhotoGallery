@@ -140,7 +140,14 @@ function navigate(direction){
         index = img.text.indexOf(query); // Find if query text is in there
       }
 
-      $(img.element).parent().parent().toggle(index != -1); // Show / hide
+      // $(img.element).parent().parent().toggle(index != -1); // Show / hide
+      if (index === -1) {
+        $(img.element).parent().parent().addClass("hide");
+      } else {
+        $(img.element).parent().parent().removeClass("hide");
+      }
+
+
     });
   }
 
