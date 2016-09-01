@@ -100,7 +100,7 @@ form {
   opacity: 0;
   width: 0;
   height: 0;
-  transform: size(0);
+  transform: scale(0);
   display: none;
 }
 
@@ -222,7 +222,6 @@ iframe {
   height: 200px;
   position: relative;
   border: 6px solid white;
-  allowfullscreen: true;
 }
 
 
@@ -365,10 +364,13 @@ MEDIA QUERIES 1000px
 }
 
 .show {
-  float: none;
-  display: inline-block;
-  margin-left: 0;
+  float: left;;
   margin-right: 60px;
+}
+
+.show:nth-of-type(4n){
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .clearfix {
@@ -380,10 +382,6 @@ MEDIA QUERIES 1000px
 .fourth {
 	margin-right: 0;
 	margin-left: 0;
-}
-
-.filterFourth {
-  margin-right: 0;
 }
 
 #overlay img {

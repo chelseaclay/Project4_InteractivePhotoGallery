@@ -144,15 +144,7 @@ function navigate(direction){
       if (index === -1) {
         $(img.element).parent().parent().addClass("hide");
       } else if (index > -1) {
-        var count = 0
         $(img.element).parent().parent().removeClass("hide fourth").addClass("show");
-        $(".show").each(function(i, e) {
-        count=count+1;
-        if (count==4) {
-            $(e).addClass('filterFourth');
-            count=0;
-          }
-        });
       }
 
 
@@ -160,9 +152,9 @@ function navigate(direction){
   }
 
   if ('oninput' in $search[0]) { // If browser supports input event
-    $search.on('input', filter); // Use input event to call filter()
+    $search.on('keyup', filter); // Use input event to call filter()
   } else {
-    $search.on('keyup', filter); // Use keyup event to call filter()
+    $search.on('input', filter); // Use keyup event to call filter()
   }
 
 }());
