@@ -36,7 +36,7 @@ header {
 header h1 {
   text-align: center;
   font-size: 2.5em;
-  font-family: 'Megrim', sans-serif;;
+  font-family: 'Megrim', sans-serif;
   max-width: 100%;
 }
 
@@ -59,9 +59,9 @@ form {
 
 #reset {
   position: absolute;
-  font-family: 'Scope One', serif;
-  font-size: 16px;
-  top: 40px;
+  font-family: 'Megrim', sans-serif;
+  font-size: 18px;
+  top: 39px;
   right: 0.5em;
   border: none;
   outline: none;
