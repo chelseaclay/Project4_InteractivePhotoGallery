@@ -78,6 +78,7 @@ form {
   outline: none;
   background-color: transparent;
   color: rgb(119, 136, 153);
+  cursor: pointer;
 }
 
 #searchBox:focus {
@@ -198,6 +199,7 @@ form {
     background-color: transparent;
     border: none;
     position: absolute;
+    cursor: pointer;
 }
 
 #overlay button:active {
